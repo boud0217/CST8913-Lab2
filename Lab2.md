@@ -5,7 +5,7 @@ flowchart TD
     User([User]) --> Firewall{Firewall}
     
     Firewall --> LB[Load balancer (VM)]
-    LB --> BLB[Backup load balancer (VM)]
+    Firewall --> BLB[Backup load balancer (VM)]
     
     LB --> Flask1[Flask server (VM)]
     LB --> Flask2[Flask server (VM)]
@@ -14,3 +14,4 @@ flowchart TD
     
     Flask1 --> DB[(Postgres database (VM))]
     Flask2 --> DB[(Postgres database (VM))]
+
